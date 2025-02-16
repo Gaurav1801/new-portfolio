@@ -1,0 +1,57 @@
+[{
+        "id": "1",
+        "name": "Portfolio Website",
+        "discription": "Developed my portfolio in React with Tailwind CSS. It's a professional description of me.",
+        "url": "",
+        "giturl": "",
+        "img": "./portfolioimg.png"
+    },
+    {
+        "id": "2",
+        "name": "TextUtil",
+        "discription": "The site is built in React, providing various operational functions for text processing.",
+        "url": "https://gaurav1801.github.io/TextUtil",
+        "giturl": "https://github.com/Gaurav1801/TextUtil",
+        "img": "./textutil.png"
+    },
+    {
+        "id": "3",
+        "name": "Todo-List",
+        "discription": "Built in React with JavaScript logic. It allows users to add, update, delete, and manage daily tasks.",
+        "url": "https://gaurav1801.github.io/Todo-list/",
+        "giturl": "https://github.com/Gaurav1801/Todo-list",
+        "img": "./todolist.png"
+    },
+    {
+        "id": "4",
+        "name": "StockIdeas",
+        "discription": "Built with Next.js (Frontend) and Laravel (Backend). Helps traders analyze support and resistance levels for stocks.",
+        "url": "https://drive.google.com/file/d/12GamPcnHsNCmNVGtJelKBoTZa6Rc6Y8M/view?usp=sharing",
+        "giturl": "https://github.com/wappzo/stock-idea-web",
+        "img": "./stockideas.png"
+    },
+    {
+        "id": "5",
+        "name": "BookStore",
+        "discription": "A MERN full-stack project implementing authentication and backend functionality for a bookstore application.",
+        "url": "https://drive.google.com/file/d/1228BOpYZlbmoGVOl6n52nOu8IqfT6KIP/view?usp=sharing",
+        "giturl": "https://github.com/Gaurav1801/bookstore-app",
+        "img": "./bookstore.png"
+    },
+    {
+        "id": "6",
+        "name": "Voting Application",
+        "discription": "Backend of a voting application with complete CRUD operations.",
+        "url": "https://github.com/Gaurav1801/vote-app",
+        "giturl": "https://github.com/Gaurav1801/vote-app",
+        "img": "./backend.png"
+    },
+    {
+        "id": "7",
+        "name": "Real-Time Chat Application",
+        "discription": "Developed a real-time chat application using Socket.io for instant messaging and Firebase for real-time notifications.",
+        "url": "",
+        "giturl": "https://github.com/Gaurav1801/chat-application",
+        "img": "./chatapp.png"
+    }
+]
