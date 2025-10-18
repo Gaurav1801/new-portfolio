@@ -33,7 +33,7 @@ export default function About() {
         >
           <h2 className="text-2xl font-bold text-blue-600 mb-4">Professional Summary</h2>
           <p className="text-gray-700 leading-relaxed">
-            I am <span className="font-semibold text-blue-700">Gaurav Tiwari</span>, a Software Engineer at{" "}
+            I am <span className="font-semibold text-blue-700">Gaurav Tiwari</span>, a <strong>Fullstack Developer</strong> at{" "}
             <a
               href="https://www.sapientcodelabs.com/"
               target="_blank"
@@ -62,7 +62,7 @@ export default function About() {
             <h2 className="text-2xl font-bold text-blue-600 mb-4">Experience</h2>
             <ul className="space-y-4 text-gray-700">
               <li className="font-semibold flex items-center gap-2">
-                Sapient Codelabs — Software Engineer (2024–Present)
+                Sapient Codelabs — <strong>Fullstack Developer</strong> (2024–Present)
                 <a
                   href="https://www.sapientcodelabs.com/"
                   target="_blank"
