@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-6 lg:px-12 py-4">
         {/* Logo / Name */}
         <div className="text-2xl font-bold text-blue-600">
-          <a href="#">Gaurav.</a>
+          <a href="/">Gaurav.</a>
         </div>
 
         {/* Desktop Menu */}
