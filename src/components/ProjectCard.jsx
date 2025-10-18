@@ -7,73 +7,96 @@ import project3 from "./../assets/todolist.png";
 import project4 from "./../assets/stockideas.png";
 import project5 from "./../assets/bookstore.png";
 import project6 from "./../assets/backend.png";
-import project7 from "./../assets/image/Socket.io.png"
+import project7 from "./../assets/image/Socket.io.png";
+// Placeholder imports for the new projects - Using project1 as a temporary placeholder image
+import project8 from "./../assets/geminai.png";
+import project9 from "./../assets/geminai.png";
+
+const projectImages = {
+  "1": project1,
+  "2": project2,
+  "3": project3,
+  "4": project4,
+  "5": project5,
+  "6": project6,
+  "7": project7,
+  // New Project Entries
+  "8": project8,
+  "9": project9,
+};
 
 export default function ProjectCard({ data }) {
-  console.log("data", data);
-
-  // Mapping IDs to corresponding images
-  const projectImages = {
-    "1": project1,
-    "2": project2,
-    "3": project3,
-    "4": project4,
-    "5": project5,
-    "6": project6,
-    "7":project7
-  };
-
   return (
     <motion.div
-      whileHover={{ scale: 1.07, boxShadow: "0px 10px 20px rgba(0,0,0,0.3)" }}
-      transition={{ duration: 0.4 }}
-      className="relative bg-white bg-opacity-10 backdrop-blur-lg border border-white/30 rounded-3xl shadow-lg overflow-hidden transition-transform duration-300 w-[320px] md:w-[360px] mx-4"
+      // Subtle card lift
+      whileHover={{ scale: 1.02, boxShadow: "0 8px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05)" }}
+      transition={{ duration: 0.3 }}
+      className="relative bg-white shadow-lg overflow-hidden w-[320px] md:w-[360px] border border-gray-200 cursor-pointer transition-all duration-300"
     >
-      {/* Project Image with Overlay Effect */}
-      <figure className="relative overflow-hidden rounded-t-3xl">
+      {/* Project Image */}
+      <figure className="relative overflow-hidden">
         <img
-          className="object-cover w-full h-56 rounded-t-3xl transition-transform duration-500 hover:scale-105"
-          src={projectImages[data?.id] || project1}
-          alt={data?.name}
+          src={projectImages[data?.id] || "./genimai.png"}
+          alt={data?.name || "Project Image"}
+          className="object-cover w-full h-56 transition-transform duration-500 hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80 hover:opacity-50 transition-opacity duration-500"></div>
+        {/* Subtle dark overlay for better contrast */}
+        <div className="absolute inset-0 bg-black/10 transition-opacity duration-500 hover:bg-black/20"></div>
       </figure>
 
       {/* Project Details */}
-      <div className="p-5 text-white">
-        <h2 className="text-2xl font-bold tracking-wide">{data?.name}</h2>
-        <p className="text-gray-300 text-sm mt-2">{data?.discription}</p>
+      <div className="p-5 text-gray-900 flex flex-col justify-between h-auto"> {/* Added flex column for content structure */}
+        <div>
+            <h2 className="text-xl font-semibold tracking-wide border-b pb-2 mb-2 text-gray-900">{data?.name}</h2> {/* Added a separator */}
+            {/* Added line-clamp-3 for consistent height and better readability for longer professional descriptions */}
+            <p className="text-gray-600 text-sm mt-2 leading-snug line-clamp-3">
+              {data?.discription}
+            </p>
+        </div>
 
-        {/* Action Buttons */}
-        <div className="flex justify-between items-center mt-4">
-          <div className="flex space-x-2">
-            {data?.techstack?.map((tech, index) => (
+        {/* Tech Stack */}
+        {data?.techstack?.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-4 pt-3 border-t border-gray-100"> {/* Added top border for separation */}
+            {data.techstack.map((tech, index) => (
               <span
                 key={index}
-                className="bg-white/20 px-2 py-1 rounded-md text-xs text-white"
+                className="bg-gray-100 border border-gray-300 px-2 py-1 rounded text-xs text-gray-700 font-medium hover:bg-gray-200 transition-colors duration-300"
               >
                 {tech}
+              	{/* The image is being used as a temporary stand-in:  */}
               </span>
             ))}
           </div>
-          <div className="flex space-x-3">
-            <a
-              href={data?.giturl}
-              className="bg-gray-900/80 text-white p-3 rounded-lg hover:bg-gray-700/80 transition-colors duration-300"
+        )}
+
+        {/* Action Buttons */}
+        <div className="flex justify-start space-x-3 mt-5 pt-3"> {/* Moved to justify-start (left-aligned) for better reading flow */}
+          {data?.giturl && (
+            <motion.a
+              whileHover={{ scale: 1.1, boxShadow: "0px 4px 15px rgba(0,0,0,0.3)" }}
+              transition={{ type: "spring", stiffness: 300 }}
+              href={data.giturl}
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-gray-800 text-white px-4 py-2 rounded flex items-center justify-center hover:bg-gray-700 transition-colors duration-300" // Removed rounded-full
+              aria-label="GitHub Link"
             >
-              <FaGithub size={20} />
-            </a>
-            <a
-              href={data?.url}
-              className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+              <FaGithub size={18} />
+            </motion.a>
+          )}
+          {data?.url && (
+            <motion.a
+              whileHover={{ scale: 1.1, boxShadow: "0px 4px 15px rgba(0,0,0,0.3)" }}
+              transition={{ type: "spring", stiffness: 300 }}
+              href={data.url}
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-4 py-2 rounded flex items-center justify-center hover:bg-blue-700 transition-colors duration-300" // Removed rounded-full
+              aria-label="Live Project Link"
             >
-              <FaExternalLinkAlt size={20} />
-            </a>
-          </div>
+              <FaExternalLinkAlt size={18} />
+            </motion.a>
+          )}
         </div>
       </div>
     </motion.div>

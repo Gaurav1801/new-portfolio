@@ -1,57 +1,83 @@
-[{
+[
+    {
         "id": "1",
         "name": "Portfolio Website",
-        "discription": "Developed my portfolio in React with Tailwind CSS. It's a professional description of me.",
+        "discription": "Developed a modern, responsive personal portfolio using React and Tailwind CSS. Showcases professional profile, projects, and skills with clean UI/UX.",
         "url": "",
         "giturl": "",
-        "img": "./portfolioimg.png"
+        "img": "./assets/portfolioimg.png",
+        "techstack": ["React", "Tailwind CSS", "Framer Motion"]
     },
     {
         "id": "2",
-        "name": "TextUtil",
-        "discription": "The site is built in React, providing various operational functions for text processing.",
+        "name": "Text Processor Utility",
+        "discription": "A front-end application built with React, providing various text operational functions, including case conversion, spacing normalization, and word/character analysis.",
         "url": "https://gaurav1801.github.io/TextUtil",
         "giturl": "https://github.com/Gaurav1801/TextUtil",
-        "img": "./textutil.png"
+        "img": "./assets/textutil.png",
+        "techstack": ["React", "JavaScript", "Bootstrap"]
     },
     {
         "id": "3",
-        "name": "Todo-List",
-        "discription": "Built in React with JavaScript logic. It allows users to add, update, delete, and manage daily tasks.",
+        "name": "Task Management Application",
+        "discription": "A simple, yet functional, To-Do list application built with React and core JavaScript logic. Allows for seamless adding, updating, deletion, and management of daily tasks.",
         "url": "https://gaurav1801.github.io/Todo-list/",
         "giturl": "https://github.com/Gaurav1801/Todo-list",
-        "img": "./todolist.png"
+        "img": "./assets/todolist.png",
+        "techstack": ["React", "JavaScript", "CSS"]
     },
     {
         "id": "4",
-        "name": "StockIdeas",
-        "discription": "Built with Next.js (Frontend) and Laravel (Backend). Helps traders analyze support and resistance levels for stocks.",
+        "name": "Stock Analysis Platform",
+        "discription": "Full-stack system using Next.js for the dynamic front-end and Laravel for the powerful backend API. Helps traders analyze support and resistance levels for market stocks.",
         "url": "https://drive.google.com/file/d/12GamPcnHsNCmNVGtJelKBoTZa6Rc6Y8M/view?usp=sharing",
         "giturl": "https://github.com/wappzo/stock-idea-web",
-        "img": "./stockideas.png"
+        "img": "./assets/stockideas.png",
+        "techstack": ["Next.js", "Laravel", "REST API", "MySQL"]
     },
     {
         "id": "5",
-        "name": "BookStore",
-        "discription": "A MERN full-stack project implementing authentication and backend functionality for a bookstore application.",
+        "name": "MERN Stack Bookstore",
+        "discription": "A full-stack e-commerce simulation implementing user authentication, CRUD operations for books, and a robust backend built with the MERN stack.",
         "url": "https://drive.google.com/file/d/1228BOpYZlbmoGVOl6n52nOu8IqfT6KIP/view?usp=sharing",
         "giturl": "https://github.com/Gaurav1801/bookstore-app",
-        "img": "./bookstore.png"
+        "img": "./assets/bookstore.png",
+        "techstack": ["MongoDB", "Express", "React", "Node.js", "Authentication"]
     },
     {
         "id": "6",
-        "name": "Voting Application",
-        "discription": "Backend of a voting application with complete CRUD operations.",
+        "name": "Voting API Backend",
+        "discription": "Developed the robust backend for a voting application, providing complete API endpoints for all CRUD operations, user registration, and secure ballot processing.",
         "url": "https://github.com/Gaurav1801/vote-app",
         "giturl": "https://github.com/Gaurav1801/vote-app",
-        "img": "./backend.png"
+        "img": "./assets/backend.png",
+        "techstack": ["Node.js", "Express", "MongoDB", "REST API"]
     },
     {
         "id": "7",
-        "name": "Real-Time Chat Application",
-        "discription": "Developed a real-time chat application using Socket.io for instant messaging and Firebase for real-time notifications.",
+        "name": "Simple Real-Time Chat",
+        "discription": "Developed a basic real-time chat application using Socket.io for instant message delivery and Firebase for handling user authentication and notifications.",
         "url": "",
         "giturl": "https://github.com/Gaurav1801/chat-application",
-        "img": "./chatapp.png"
+        "img": "./assets/image/Socket.io.png",
+        "techstack": ["Socket.io", "React", "Firebase", "Node.js"]
+    },
+    {
+        "id": "8",
+        "name": "Intelligent Contextual Chat Gateway",
+        "discription": "Proprietary internal solution developed to integrate chat functionality with scoped knowledge retrieval. The system enforces context-based filtering to ensure responses are limited to a specific data range and provides structured data output from conversational queries.",
+        "url": "",
+        "giturl": "",
+        "img": "./assets/image/secure_company_project.png", 
+        "techstack": ["Node.js", "Express", "Custom Middleware", "LLM Integration", "Security"]
+    },
+    {
+        "id": "9",
+        "name": "Real-Time Geo-Location Dispatch Platform",
+        "discription": "Architected and implemented a real-time ride-share platform (MERN stack). Utilizes Socket.IO for instantaneous, bi-directional communication to track and update driver/rider location on the map, with transactional data persisted in MongoDB.",
+        "url": "",
+        "giturl": "",
+        "img": "./assets/image/secure_company_project.png", 
+        "techstack": ["MERN Stack", "Socket.IO", "Geolocation", "MongoDB", "Real-Time Updates"]
     }
 ]

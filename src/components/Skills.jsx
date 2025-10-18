@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
-// Import images properly
+// Import images
 import htmlIcon from "./../assets/image/html.png";
 import cssIcon from "./../assets/image/css.png";
 import jsIcon from "./../assets/image/javascript.png";
@@ -18,7 +18,7 @@ import firebaseIcon from "./../assets/image/Firebase.png";
 import socketioIcon from "./../assets/image/Socket.io.png";
 
 export default function Skills() {
-  var settings = {
+  const settings = {
     infinite: true,
     slidesToShow: 4,
     autoplay: true,
@@ -30,33 +30,12 @@ export default function Skills() {
     cssEase: "linear",
     pauseOnHover: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1 } },
     ],
   };
 
-  // Define skills with properly imported images
   const skills = [
     { name: "HTML", src: htmlIcon },
     { name: "CSS", src: cssIcon },
@@ -64,41 +43,45 @@ export default function Skills() {
     { name: "Node.js", src: nodeIcon },
     { name: "Express.js", src: expressIcon },
     { name: "MongoDB", src: mongodbIcon },
-    { name: "Tailwind CSS", src:  tailwindIcon},
-    { name: "ReactJS", src:  reactIcon },
-    { name: "Next.js", src: nextjsIcon},
-    { name: "Firebase", src:  firebaseIcon},
-    { name: "Socket.io", src: socketioIcon},
+    { name: "Tailwind CSS", src: tailwindIcon },
+    { name: "ReactJS", src: reactIcon },
+    { name: "Next.js", src: nextjsIcon },
+    { name: "Firebase", src: firebaseIcon },
+    { name: "Socket.io", src: socketioIcon },
   ];
 
   return (
-    <section id="skills" className="py-16">
+    <section id="skills" className="py-20 px-6 bg-[#F8FAFF]">
+      {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl text-center font-extrabold text-white tracking-wide"
+        className="text-5xl text-center font-extrabold text-gray-900 tracking-wide"
       >
-        <span className="bg-gradient-to-r from-yellow-300 via-pink-500 to-blue-500 bg-clip-text text-transparent">
-          My Skills
-        </span>
+        <span className="text-blue-600">Technical Skills</span>
       </motion.h1>
 
-      <div className=" pt-10 mx-10">
+      {/* Slider */}
+      <div className="pt-12 max-w-6xl mx-auto">
         <Slider {...settings}>
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center gap-2"
             >
-              <img
-                className="h-[220px] w-auto object-contain drop-shadow-xl"
-                src={skill.src}
-                alt={skill.name}
-              />
-              <p className="text-white text-center text-lg font-semibold mt-2">{skill.name}</p>
+              <div className="bg-white border border-blue-100 shadow-md rounded-2xl p-6 flex flex-col items-center justify-center transition-transform duration-300">
+                <img
+                  className="h-24 w-auto object-contain mb-3"
+                  src={skill.src}
+                  alt={skill.name}
+                />
+                <p className="text-gray-800 text-center text-lg font-semibold">
+                  {skill.name}
+                </p>
+              </div>
             </motion.div>
           ))}
         </Slider>
